@@ -5,6 +5,8 @@
 	<meta charset="utf-8">
 	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link rel="shortcut icon" href="https://pngimg.com/uploads/netflix/netflix_PNG15.png"> 
+
 </head>
 <body>
 
@@ -14,11 +16,11 @@
 				<a href=""><img src="images/logo_netflix.png" /></a>
 				<div class="menu-header">
 					<ul>
-						<li><a href="">Início</a></li>
-						<li><a href="">Séries</a></li>
-						<li><a href="">Filmes</a></li>
-						<li><a href="">Adicionados Recentemente</a></li>
-						<li><a href="">Minha Lista</a></li>
+						<li><a href="#destaque">Início</a></li>
+						<li><a href="#about">Sobre</a></li>
+						<li><a href="#home">Filmes</a></li>
+						<li><a href="#home">Adicionados Recentemente</a></li>
+						<li><a href="#home">Minha Lista</a></li>
 					</ul>
 				</div><!--menu-header-->
 			</div><!--header-left-->
@@ -50,25 +52,74 @@
 
 		<div class="overlay"></div><!--overlay-->
 		<div class="texto-destaque">
-			<h2>Lorem Ipsum</h2>
-			<h3>Assita a 9 temporada completa agora!</h3>
+			<h2>Modelo de Négocio Netflix</h2>
+			<h3>Assista a 9 temporada de Arquitetura Empresarial completa agora!</h3>
 			<p>Aqui vai a descrição completa da minha série ou filme.</p>
 			<br />
-			<a href=""><i class="icon-play"></i> Assistir</a>
-			<a href=""><i class="icon-play"></i> Assistir</a>
-			<a href=""><i class="icon-play"></i> Assistir</a>
+			<a href="https://www.una.br/cursos/sistemas-de-informacao/" target="a_blank"><i class="icon-play"></i> Assistir</a>
+			
 		</div><!--texto-destaque-->
 	</section><!--destaque-->
 
-	<!--
-		- Vitrine
-		- Slider da vitrine
-		- Menu responsivo
+	
+		<section class="about" id="about">
+			<div class="container">
+				<h2 class="title">Sobre</h2>
+				<div class="about-content">
+					<div class="img">
+						<img src="./images/NetflixPaper.jpg" alt="me">
+					</div>
+					<div class="description">
+						<h4>Missão</h4>
+						<p>A missão da Netflix é entreter o mundo. Levamos até você as melhores séries, filmes e documentários para todos os gostos, onde quer que você esteja. Nossos assinantes controlam o que querem ver e quando, sem anúncios, com uma simples assinatura.</p>
+						<h4>Visão</h4>
+						<p>Ser o melhor serviço de distribuição de entretenimento do mundo, licenciando o maior número possível de conteúdo e criando um "ambiente" onde criadores de conteúdo consigam ter uma audiência global.</p>					
+						<h4>Valor</h4>
+							<p>Produtividade, criatividade, inteligência, honestidade, comunicação, paixão, altruísmo e confiança.</p>						
+						<p>
+							<button type="button" class="btn-bg"><a href="file:///C:/Users/Compras/Downloads/2843948.pdf" target="a_blank">Artigo Presidente Netflix </a></button>
+							<button type="button" href="" class="btn-light"><a  href="https://www.netflix.com/br/" target="a_blank">Conheça a Plataforma</a></button>
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				var bottom=$("header").outerHeight();
+				var header=$("header").offset().top + bottom;
+			 $(window).scroll(function(){
+				  // header fixed only when window width greater than 991px
+				 if($(window).width()>991){
+				 if($(window).scrollTop()>=header){
+					 $("header").addClass("sticky")
+				 }
+				 else{
+				  $("header").removeClass("sticky")	
+				 }
+			 }
+			 })
+		
+			 // navbar active link
+		
+			 $(".navbar ul li a").click(function(){
+				  $(".navbar ul li a").removeClass("active")
+				  $(this).addClass("active");
+			 })
+		  
+			$(".ham-burger").click(function(){
+				$(this).toggleClass("active")
+				$(".navbar").toggleClass("open");
+			})
+		
+			})
+		
+		</script>
 
-	-->
-
-
-
+ 
+ </script>
 
 </body>
 </html>
